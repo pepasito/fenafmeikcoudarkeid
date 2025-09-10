@@ -1,6 +1,11 @@
 browserEvents.onMouseMove(function (x, y) {
     mouse_x = x
+    mouse_y = y
+    if (y <= 0) {
+    	
+    }
 })
+let mouse_y = 0
 let mouse_x = 0
 let mySprite = sprites.create(img`
     cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
@@ -127,13 +132,13 @@ let mySprite = sprites.create(img`
 forever(function () {
     if (mouse_x <= 60) {
         if (mySprite.x < 148) {
-            mySprite.x += 2
+            mySprite.x += 3
         }
     }
-    console.logValue("x", mouse_x)
     if (mouse_x >= 100) {
         if (mySprite.x > 6) {
-            mySprite.x += -2
+            mySprite.x += -3
         }
     }
+    console.logValue("x", 0)
 })
